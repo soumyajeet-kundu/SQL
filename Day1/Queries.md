@@ -59,13 +59,16 @@ Query-SELECT * from movie where monthname(releaseDate)="october";
 <br>
 
 <b>Q13.Display the movienames whose production id for different languages.</b>
+
 Query-
 
 
 <br><br>
 -------------------Advanced Queries----------------------
 
-1.Write the query to display productionid, production name with total number movies produced by each. Query: select p.productionid, m.moviename, count(m.productionid) from movies as m inner join productions as p on p.productionid=m.productionid group by p.productionid;
+<b>1.Write the query to display productionid, production name with total number movies produced by each.</b> 
+
+Query: select p.productionId, m.movieName, count(m.productionId) from movies as m inner join productions as p on p.productionId=m.productionId group by p.productionId;
 
 2.Write the query to display production name, owner name have produced more than 2 movies. Query: select p.Ownername,p.Productionid ,p.Productionname, count(m.Movienname) from productions as p left join movie as m ON p.Productionid = m.Productionid group by p.Productionid having count(Movienname)>=2;
 
