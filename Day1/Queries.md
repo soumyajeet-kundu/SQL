@@ -3,44 +3,66 @@
 Query-SELECT moviename,movieType FROM movie where movieType="Drama%";
 
 
-Q2. Display the movies acted by actor Ayushmann.
+<b>Q2. Display the movies acted by actor Ayushmann.</b>
 
 Query-SELECT moviename FROM movie where heroName="Ayushmann";
 
-Q3. Display the count of movies, having length above 18.
+
+<b>Q3. Display the count of movies, having length above 18.</b>
+
 Query- SELECT count(*) from movie where length>18;
 
-Q4. Display the movie having minimum length.
+
+<b>Q4. Display the movie having minimum length.</b>
+
 Query-SELECT MovieName From movie where length=(Select min(length) from movie);
 
-Q5. Display all the details of movie, the language that first name starts with ‘T’.
+
+<b>Q5. Display all the details of movie, the language that first name starts with ‘T’.</b>
+
 Query- SELECT * from movie where language like "T%";
 
-Q6. Display the movie name, hero name, heroine name whose having maximum length.
+
+<b>Q6. Display the movie name, hero name, heroine name whose having maximum length.</b>
+
 Query- SELECT movieName, heroName , heroIne from movie where length = (SELECT max(length) from movie);
 
-Q7. Display the movie name, hero name, heroine name the movie released after 15 march 2018.
+
+<b> Q7. Display the movie name, hero name, heroine name the movie released after 15 march 2018.</b>
+
 Query-SELECT movieName from movie where releaseDate>"2018-03-15";
 
-Q8. Display the count of thriller movies.
+
+<b>Q8. Display the count of thriller movies.</b>
+
 Query-SELECT count(*) from movie where movieType like "%thriller";
 
-Q9. Display the count of movies whose released before 15 march 2018
+
+<b>Q9. Display the count of movies whose released before 15 march 2018</b>
+
 Query- SELECT * from movie where releaseDate<"2018-03-15";
 
-Q10. Display the release date of the movie name ‘Zero’.
+
+<b>Q10. Display the release date of the movie name ‘Zero’.</b>
+
 Query- SELECT releaseDate from movie where movieName="Zero";
 
-Q11.Display the actor name that acted with ‘Amy’.
+
+<b>Q11.Display the actor name that acted with ‘Amy’.</b>
+
 Query-SELECT heroName from movie where heroIne="Amy";
 
-Q12.Display the Count of maximum movies released in a month of October.
+
+<b>Q12.Display the Count of maximum movies released in a month of October.</b>
+
 Query-SELECT * from movie where monthname(releaseDate)="october";
 
-Q13.Display the movienames whose production id for different languages.
+
+<b>Q13.Display the movienames whose production id for different languages.</b>
 Query-
 
 
+<br><br>
 -------------------Advanced Queries----------------------
 
 1.Write the query to display productionid, production name with total number movies produced by each. Query: select p.productionid, m.moviename, count(m.productionid) from movies as m inner join productions as p on p.productionid=m.productionid group by p.productionid;
