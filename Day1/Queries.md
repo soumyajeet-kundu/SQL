@@ -1,62 +1,62 @@
 <b>Q1. Display the name of movies, movie type is starts with Drama.</b>
 
 Query-SELECT moviename,movieType FROM movie where movieType="Drama%";
-
+<br>
 
 <b>Q2. Display the movies acted by actor Ayushmann.</b>
 
 Query-SELECT moviename FROM movie where heroName="Ayushmann";
-
+<br>
 
 <b>Q3. Display the count of movies, having length above 18.</b>
 
 Query- SELECT count(*) from movie where length>18;
-
+<br>
 
 <b>Q4. Display the movie having minimum length.</b>
 
 Query-SELECT MovieName From movie where length=(Select min(length) from movie);
-
+<br>
 
 <b>Q5. Display all the details of movie, the language that first name starts with ‘T’.</b>
 
 Query- SELECT * from movie where language like "T%";
-
+<br>
 
 <b>Q6. Display the movie name, hero name, heroine name whose having maximum length.</b>
 
 Query- SELECT movieName, heroName , heroIne from movie where length = (SELECT max(length) from movie);
-
+<br>
 
 <b> Q7. Display the movie name, hero name, heroine name the movie released after 15 march 2018.</b>
 
 Query-SELECT movieName from movie where releaseDate>"2018-03-15";
-
+<br>
 
 <b>Q8. Display the count of thriller movies.</b>
 
 Query-SELECT count(*) from movie where movieType like "%thriller";
-
+<br>
 
 <b>Q9. Display the count of movies whose released before 15 march 2018</b>
 
 Query- SELECT * from movie where releaseDate<"2018-03-15";
-
+<br>
 
 <b>Q10. Display the release date of the movie name ‘Zero’.</b>
 
 Query- SELECT releaseDate from movie where movieName="Zero";
-
+<br>
 
 <b>Q11.Display the actor name that acted with ‘Amy’.</b>
 
 Query-SELECT heroName from movie where heroIne="Amy";
-
+<br>
 
 <b>Q12.Display the Count of maximum movies released in a month of October.</b>
 
 Query-SELECT * from movie where monthname(releaseDate)="october";
-
+<br>
 
 <b>Q13.Display the movienames whose production id for different languages.</b>
 Query-
