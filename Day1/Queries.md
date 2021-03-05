@@ -2,7 +2,9 @@ Q1. Display the name of movies, movie type is starts with Drama.
 
 Query-SELECT moviename,movieType FROM movie where movieType="Drama%";
 
+
 Q2. Display the movies acted by actor Ayushmann.
+
 Query-SELECT moviename FROM movie where heroName="Ayushmann";
 
 Q3. Display the count of movies, having length above 18.
