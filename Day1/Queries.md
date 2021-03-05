@@ -1,4 +1,4 @@
-<b>Q1. Display the name of movies, movie type is starts with Drama.<b>
+<b>Q1. Display the name of movies, movie type is starts with Drama.</b>
 
 Query-SELECT moviename,movieType FROM movie where movieType="Drama%";
 
