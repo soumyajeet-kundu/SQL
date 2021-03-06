@@ -103,7 +103,7 @@ Ans: Amy </b>
 
 Query: Select p.productionId ,m.heroName, max(m.language) from productions as p left join movie as m ON p.productionId = m.productionId group by m.heroName;
 
-<b> 10.Write the query to display the production name, owner name who has produced movie for more languages. <b>
+<b> 10.Write the query to display the production name, owner name who has produced movie for more languages. </b>
 Query:
 
 <b>11.Write the query to display the productionname, producername who has not produced any movie </b>
