@@ -70,24 +70,42 @@ Query-
 
 Query: select p.productionId, m.movieName, count(m.productionId) from movies as m inner join productions as p on p.productionId=m.productionId group by p.productionId;
 
-2.Write the query to display production name, owner name have produced more than 2 movies. Query: select p.Ownername,p.Productionid ,p.Productionname, count(m.Movienname) from productions as p left join movie as m ON p.Productionid = m.Productionid group by p.Productionid having count(Movienname)>=2;
+<b>2.Write the query to display production name, owner name have produced more than 2 movies. </b>
 
-3.Write the query to display production name, owner name have produced maximum movies Query: select p.Productionid ,p.Productionname, max(mv.Moviename) from productions as p left join movies as mv ON p.Productionid = mv.Productionid group by p.Productionid ORDER BY 'Productionid' DESC LIMIT 1;
+Query: select p.ownerName,p.productionId ,p.productionName, count(m.movieName) from productions as p left join movie as m ON p.Productionid = m.Productionid group by p.productionId having count(movieName)>=2;
 
-4.Write the query to display the moviename, heroname and productionname acted in the producer name= ’Subaskaran’. Query: select p.Productionname, m.Moviename, m.Heroname, m.language from productions as p left join movies as m on p.productionid = m.Productionid where language !='Subaskaran';
+<b>3.Write the query to display production name, owner name have produced maximum movies.</b> 
 
-5.Write the query to display the moviename, heroname whose productionid ends with 82. Query: select p.Productionname, m.Moviename, m.Heroname, m.language, m.productionid from productions as p left join movies as m on p.productionid = m.Productionid where p.productionid like "%82";
+Query: select p.productionId ,p.productionName, max(mv.movieName) from productions as p left join movies as mv ON p.productionId = mv.productionId group by p.productionId ORDER BY 'productionId' DESC LIMIT 1;
 
-6.Write the query to display the productionname, ownername who has not produced the movie. Query: select p.Productionname, p.Ownername from productions as p left join movie as m on p.Productionid = m.Productionid group by p.productionid having count(m.Movienname)=0;
+<b>4.Write the query to display the moviename, heroname and productionname acted in the producer name= ’Subaskaran’.</b> 
 
-7.Write the query to display the productionname, ownername who has not produced the ‘hindi’ movie. Query: select p.Productionname, m.Moviename, m.Heroname, m.language from productions as p left join movies as m on p.productionid = m.Productionid where language !='hindi';
+Query: select p.productioName, m.movieName, m.heroName, m.language from productions as p left join movies as m on p.productionId = m.productionId where language !='Subaskaran';
 
-8.Write the query name to display the heroinename who acted in the different productions but not in same production id.
+<b>5.Write the query to display the moviename, heroname whose productionid ends with 82.</b> 
 
-Ans: Amy
+Query: select p.productionName, m.Moviename, m.heroName, m.language, m.productionId from productions as p left join movies as m on p.productionId = m.productionId where p.productionId like "%82";
 
-9.Write the query to display the heroname who acted in maximum languages. Query: Select p.Productionid ,m.Heroname, max(m.Language) from productions as p left join movie as m ON p.Productionid = m.Productionid group by m.Heroname;
+<b>6.Write the query to display the productionname, ownername who has not produced the movie. </b>
 
-10.Write the query to display the production name, owner name who has produced movie for more languages. Query:
+Query: select p.productionName, p.ownerName from productions as p left join movie as m on p.productionId = m.productionId group by p.productionId having count(m.movieName)=0;
 
-11.Write the query to display the productionname, producername who has not produced any movie Query: select p.productionname, p.ownername from productions as p left join movies as m on p.productionid = m.productionid group by p.productionid having count(m.moviename)=0;
+<b>7.Write the query to display the productionname, ownername who has not produced the ‘hindi’ movie. </b>
+
+Query: select p.productionName, m.movieName, m.heroName, m.language from productions as p left join movies as m on p.productionId = m.productionId where language !='hindi';
+
+
+<b>8.Write the query name to display the heroinename who acted in the different productions but not in same production id.
+
+Ans: Amy </b>
+
+<b>9.Write the query to display the heroname who acted in maximum languages. </b>
+
+Query: Select p.productionId ,m.heroName, max(m.language) from productions as p left join movie as m ON p.productionId = m.productionId group by m.heroName;
+
+<b> 10.Write the query to display the production name, owner name who has produced movie for more languages. <b>
+Query:
+
+<b>11.Write the query to display the productionname, producername who has not produced any movie </b>
+
+Query: select p.productionName, p.ownerName from productions as p left join movies as m on p.productionId = m.productionId group by p.productionId having count(m.movieName)=0;
